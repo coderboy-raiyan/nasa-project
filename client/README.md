@@ -2,8 +2,6 @@
 
 The completed version of our NASA project.
 
-Keep in mind that we recommend you code along with us and use this only if you ever get stuck or you don't like to code along.
-
 ## Getting Started
 
 1. Ensure you have Node.js installed.
