@@ -10,11 +10,6 @@ const server = http.createServer(app);
 
 connectDb();
 colors.enable();
-
-app.get('/', (req, res) => {
-    res.send({ message: 'Listening...' });
-});
-
 async function startServer() {
     await loadHabitablePlanets();
     server.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
