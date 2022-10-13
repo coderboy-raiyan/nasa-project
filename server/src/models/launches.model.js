@@ -20,7 +20,7 @@ function getAllLaunches() {
 
 function addNewLaunch(launch) {
     lastFlightNumber++;
-    launch.set(lastFlightNumber, {
+    launches.set(lastFlightNumber, {
         ...launch,
         flightNumber: lastFlightNumber,
         customer: ['Raiyan', 'NASA'],
