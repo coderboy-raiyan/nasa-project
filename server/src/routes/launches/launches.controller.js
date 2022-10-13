@@ -7,8 +7,8 @@ async function httpGetAllLaunches(req, res) {
 }
 
 async function httpAddNewLaunce(req, res) {
-    const { mission, rocket, destination, launchDate } = req.body;
-    if (!mission || !rocket || !destination || !launchDate) {
+    const { mission, rocket, target, launchDate } = req.body;
+    if (!mission || !rocket || !target || !launchDate) {
         return res.status(400).json({ message: 'All the fields are required' });
     }
 
