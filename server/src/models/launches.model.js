@@ -29,4 +29,15 @@ function addNewLaunch(launch) {
     });
 }
 
-module.exports = { getAllLaunches, addNewLaunch };
+function abortLaunchById(launchId, res) {
+    if (!launches.has(+launchId)) {
+        return res.status(404).json({ message: 'Launch does not exits' });
+    }
+
+    const aborted = launches.get(+launchId);
+    aborted.upcoming = false;
+    aborted.success = false;
+    return aborted;
+}
+
+module.exports = { getAllLaunches, addNewLaunch, abortLaunchById };
